@@ -2,6 +2,8 @@
 title: 20-Year Retirement Portfolio
 subtitle: BlackRock student asset management competition, top 5%
 date: 2024-03-01
+status: Completed
+period: Duke University
 order: 6
 tags: [Finance, Portfolio theory]
 ---

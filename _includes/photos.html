@@ -1,0 +1,1 @@
+{% assign photo_list = site.static_files | where_exp: "f", "f.path contains '/assets/photos/'" | where_exp: "f", "f.extname != ''" | where_exp: "f", "f.basename != '.gitkeep'" %}

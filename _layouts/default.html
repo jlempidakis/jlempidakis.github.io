@@ -22,7 +22,7 @@
       <nav>
         <a href="{{ '/#work' | relative_url }}">Work</a>
         <a href="{{ '/#projects' | relative_url }}">Projects</a>
-        <a href="{{ '/#photos' | relative_url }}">Photos</a>
+        {% include photos.html %}{% if photo_list.size > 0 %}<a href="{{ '/#photos' | relative_url }}">Photos</a>{% else %}<a href="{{ '/#progress' | relative_url }}">Progress</a>{% endif %}
         <a href="{{ '/#contact' | relative_url }}">Contact</a>
       </nav>
     </div>

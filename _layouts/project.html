@@ -3,13 +3,28 @@ layout: default
 ---
 <article class="wrap project">
   <a class="back" href="{{ '/#projects' | relative_url }}">← All projects</a>
-  <p class="card-date">{{ page.date | date: "%B %Y" }}</p>
+  {% if page.logo %}<span class="logo-chip logo-chip-lg"><img src="{{ page.logo | relative_url }}" alt="{{ page.title }} logo" width="600" height="292"></span>{% endif %}
+  <p class="card-date">{% if page.status %}<span class="status status-{{ page.status | slugify }}">{{ page.status }}</span>{% endif %}{{ page.period | default: page.date | date: "%B %Y" }}</p>
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}<p class="headline">{{ page.subtitle }}</p>{% endif %}
   {% if page.tags %}<p class="tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
   {% if page.image %}<img class="project-hero" src="{{ page.image | relative_url }}" alt="{{ page.title }}">{% endif %}
 
   <div class="prose">{{ content }}</div>
+
+  {% assign ups = site.data.updates | where: "project", page.slug | sort: "date" | reverse %}
+  {% if ups.size > 0 %}
+  <h2 class="section-title timeline-title">Progress</h2>
+  <ol class="timeline">
+    {% for u in ups %}
+    <li>
+      <time datetime="{{ u.date | date: '%Y-%m-%d' }}">{{ u.date | date: "%B %Y" }}</time>
+      <p>{{ u.text }}</p>
+      {% if u.image %}<a href="{{ u.image | relative_url }}" data-lightbox><img src="{{ u.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
 
   {% if page.gallery %}
   <div class="gallery">

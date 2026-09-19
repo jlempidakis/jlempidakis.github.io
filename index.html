@@ -28,13 +28,35 @@ layout: default
   {% endfor %}
 </section>
 
+{% assign recent = site.data.updates | sort: "date" | reverse %}
+{% if recent.size > 0 %}
+<section id="progress" class="wrap section">
+  <h2 class="section-title">Recent progress</h2>
+  <ol class="feed">
+    {% for u in recent limit: 5 %}
+    {% assign up = site.projects | where: "slug", u.project | first %}
+    <li>
+      <time datetime="{{ u.date | date: '%Y-%m-%d' }}">{{ u.date | date: "%b %Y" }}</time>
+      <div>
+        {% if up %}<a class="feed-project" href="{{ up.url | relative_url }}">{{ up.title }}</a>{% endif %}
+        <p>{{ u.text }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
 <section id="work" class="wrap section">
   <h2 class="section-title">Venture</h2>
   <article class="venture">
     <header class="entry-head">
-      <div>
-        <h3>{{ p.venture.name }}</h3>
-        <p class="role">{{ p.venture.role }}</p>
+      <div class="venture-id">
+        {% if p.venture.logo %}<span class="logo-chip"><img src="{{ p.venture.logo | relative_url }}" alt="{{ p.venture.name }} logo" width="600" height="292"></span>{% endif %}
+        <div>
+          <h3>{{ p.venture.name }}</h3>
+          <p class="role">{{ p.venture.role }}</p>
+        </div>
       </div>
       <p class="meta">{{ p.venture.dates }}<span class="place">{{ p.venture.place }}</span></p>
     </header>
@@ -47,6 +69,7 @@ layout: default
       </div>
       {% endfor %}
     </div>
+    {% if p.venture.project %}<p class="more"><a href="{{ '/projects/' | append: p.venture.project | append: '/' | relative_url }}">See the progress timeline →</a></p>{% endif %}
   </article>
 
   <h2 class="section-title">Experience</h2>
@@ -76,6 +99,19 @@ layout: default
     <ul>{% for pt in ed.points %}<li>{{ pt }}</li>{% endfor %}</ul>
   </article>
   {% endfor %}
+
+  {% if p.recognition %}
+  <h2 class="section-title">Recognition</h2>
+  <div class="recog">
+    {% for r in p.recognition %}
+    <div class="recog-item">
+      <span class="recog-kind">{{ r.kind }}</span>
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.detail }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>
 
 <section id="projects" class="wrap section">
@@ -86,9 +122,11 @@ layout: default
     <a class="card" href="{{ proj.url | relative_url }}">
       {% if proj.image %}<img class="card-img" src="{{ proj.image | relative_url }}" alt="" loading="lazy">{% endif %}
       <div class="card-body">
-        <p class="card-date">{{ proj.date | date: "%B %Y" }}</p>
+        <p class="card-date">{% if proj.status %}<span class="status status-{{ proj.status | slugify }}">{{ proj.status }}</span>{% endif %}{{ proj.period | default: proj.date | date: "%B %Y" }}</p>
         <h3>{{ proj.title }}</h3>
         <p>{{ proj.subtitle }}</p>
+        {% assign latest = site.data.updates | where: "project", proj.slug | sort: "date" | last %}
+        {% if latest %}<p class="card-latest"><strong>{{ latest.date | date: "%b %Y" }}:</strong> {{ latest.text | truncatewords: 16 }}</p>{% endif %}
         {% if proj.tags %}<p class="tags">{% for t in proj.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
       </div>
     </a>
@@ -96,23 +134,19 @@ layout: default
   </div>
 </section>
 
-{% assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/photos/'" %}
+{% include photos.html %}
+{% if photo_list.size > 0 %}
 <section id="photos" class="wrap section">
   <h2 class="section-title">Photos</h2>
-  {% assign shown = 0 %}
   <div class="gallery">
-    {% for f in photos %}
-      {% assign ext = f.extname | downcase %}
-      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" %}
-      {% assign shown = shown | plus: 1 %}
+    {% for f in photo_list %}
       <a href="{{ f.path | relative_url }}" data-lightbox>
         <img src="{{ f.path | relative_url }}" alt="{{ f.basename | replace: '-', ' ' | replace: '_', ' ' }}" loading="lazy">
       </a>
-      {% endif %}
     {% endfor %}
   </div>
-  {% if shown == 0 %}<p class="muted">Photos coming soon.</p>{% endif %}
 </section>
+{% endif %}
 
 <section class="wrap section two-col">
   <div>

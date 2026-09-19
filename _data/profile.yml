@@ -33,22 +33,24 @@ highlights:
 
 venture:
   name: Grid Intelligence
+  logo: /assets/img/grid-intelligence-logo.png
+  project: grid-intelligence       # links to the project page with the progress timeline
   role: Co-Founder & CEO
   dates: 2025 – Present
   place: Durham, NC
   summary: >-
     A congestion-native forecasting and dispatch layer for battery storage. We forecast node-level
     prices and turn them into dispatch schedules operators can audit, run within power, state-of-charge
-    and degradation limits.
+    and degradation limits, and built to stack revenue across more than one value stream.
   points:
     - title: Commercial traction
-      text: Two paying industrial clients in Europe for battery sizing, storage investment and dispatch analysis. The first engagement converted into a performance-based dispatch pilot.
-    - title: US pilot
-      text: Technical pilot at a solar-plus-storage microgrid in the US Southeast, feeding day-ahead dispatch schedules into the site's energy management system.
+      text: Two paying industrial clients in Europe for battery sizing, storage investment and dispatch analysis. The first engagement converted into a performance-based dispatch pilot. One pilot in the US.
+    - title: Live operations
+      text: A day-ahead forecasting and dispatch loop runs at a client site in Europe, with a customer dashboard on top.
     - title: Funding & recognition
       text: Raised $30,000 in non-dilutive funding. Selected for the Greentown Labs climatetech accelerator and Duke's Melissa & Doug Entrepreneurs program.
-    - title: Product
-      text: Node-level price forecasting with uncertainty bands, and reliability-constrained dispatch optimization on PJM nodes.
+    - title: Team & pace
+      text: Two co-founders. 1,200+ commits since February 2026, from a single-node prototype to a system running for clients.
 
 experience:
   - org: Plastika Kritis
@@ -92,6 +94,20 @@ education:
     place: Heraklion, Greece
     points:
       - Ranked 1st in graduating class. President of the Student Association.
+
+recognition:
+  - title: Greentown Labs
+    detail: Selected for the climatetech accelerator with Grid Intelligence
+    kind: Venture
+  - title: Melissa & Doug Entrepreneurs
+    detail: Duke program for student founders
+    kind: Venture
+  - title: BlackRock student competition
+    detail: Top 5% for a 20-year retirement portfolio
+    kind: Finance
+  - title: 1st in graduating class
+    detail: Pagkrition High School, 19.9/20. President of the Student Association.
+    kind: Academic
 
 skills:
   - group: Languages & data

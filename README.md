@@ -4,10 +4,23 @@ Personal site of Ioannis Lempidakis — live at **https://jlempidakis.github.io*
 
 Hosted free on GitHub Pages. Every change you commit on github.com goes live in about a minute.
 
+## Post a progress update
+Open `_data/updates.yml` → pencil icon → add a block at the bottom → **Commit changes**:
+
+```
+- date: 2026-10-15
+  project: grid-intelligence
+  text: What happened, in one or two sentences.
+```
+
+`project` is the project's file name in `_projects/` without `.md`. The update shows on that project's timeline, on its card, and in "Recent progress" on the home page. Optional: `image: /assets/projects/some-photo.jpg`.
+
+To mark a project finished, change `status: Active` to `status: Completed` in its file.
+
 ## Add a photo
 1. Open the `assets/photos` folder on github.com.
 2. **Add file → Upload files**, drag in your pictures, **Commit changes**.
-3. They appear in the Photos section automatically. The file name becomes the caption, so name them like `windsurfing-crete.jpg`.
+3. They appear in a Photos section automatically (the section and its menu link stay hidden until the folder has at least one photo). The file name becomes the caption, so name them like `windsurfing-crete.jpg`.
 
 Tip: phone photos are large. Resize to ~2000px on the long side first, and phone photos can carry GPS location. On a Mac, *Preview → Tools → Show Inspector → GPS → Remove Location Info* before uploading.
 

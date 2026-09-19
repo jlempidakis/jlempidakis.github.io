@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────────────────────
+#  Progress log. Newest entries can go anywhere — the site sorts by date.
+#  To post an update, copy a block and change it:
+#
+#  - date: 2026-10-15
+#    project: grid-intelligence      # file name in _projects/, without .md
+#    text: What happened, in one or two sentences.
+#
+#  It appears on that project's page (as a timeline) and in
+#  "Recent progress" on the home page.
+# ─────────────────────────────────────────────────────────────
+
+- date: 2026-02-01
+  project: grid-intelligence
+  text: First day-ahead price forecasting prototype for a single node in the US PJM market.
+
+- date: 2026-03-01
+  project: grid-intelligence
+  text: Forecasting extended from one node to many, alongside a first product interface for searching and comparing nodes on a map.
+
+- date: 2026-04-01
+  project: grid-intelligence
+  text: Battery dispatch optimizer finalized and validated, turning price forecasts into charge and discharge schedules within the battery's physical limits.
+
+- date: 2026-05-01
+  project: grid-intelligence
+  text: Research into how grid congestion shapes node-level prices, feeding the next generation of the forecasting layer.
+
+- date: 2026-06-01
+  project: grid-intelligence
+  text: First European industrial client received battery sizing and storage investment analysis.
+
+- date: 2026-08-01
+  project: grid-intelligence
+  text: Second industrial client received a full deliverable set (proposal, financial workbook and companion report), reconciled line by line against the client's own financial model.
+
+- date: 2026-08-15
+  project: grid-intelligence
+  text: Began modelling revenue stacking, so one battery can earn from several value streams instead of one.
+
+- date: 2026-09-01
+  project: grid-intelligence
+  text: Day-ahead forecasting and dispatch loop now running at a client site in Europe, with a second-generation forecasting model and a customer dashboard.
