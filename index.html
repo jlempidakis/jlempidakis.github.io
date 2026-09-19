@@ -36,7 +36,7 @@ layout: default
         <h3>{{ p.venture.name }}</h3>
         <p class="role">{{ p.venture.role }}</p>
       </div>
-      <p class="meta">{{ p.venture.dates }}<br>{{ p.venture.place }}</p>
+      <p class="meta">{{ p.venture.dates }}<span class="place">{{ p.venture.place }}</span></p>
     </header>
     <p class="lede">{{ p.venture.summary }}</p>
     <div class="venture-grid">
@@ -57,7 +57,7 @@ layout: default
         <h3>{{ job.org }}</h3>
         <p class="role">{{ job.role }}</p>
       </div>
-      <p class="meta">{{ job.dates }}<br>{{ job.place }}</p>
+      <p class="meta">{{ job.dates }}<span class="place">{{ job.place }}</span></p>
     </header>
     <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
   </article>
@@ -71,7 +71,7 @@ layout: default
         <h3>{{ ed.school }}</h3>
         <p class="role">{{ ed.degree }}</p>
       </div>
-      <p class="meta">{{ ed.dates }}<br>{{ ed.place }}</p>
+      <p class="meta">{{ ed.dates }}<span class="place">{{ ed.place }}</span></p>
     </header>
     <ul>{% for pt in ed.points %}<li>{{ pt }}</li>{% endfor %}</ul>
   </article>
