@@ -20,7 +20,6 @@ Founded by two co-founders; I lead the company as CEO.
 **Where it stands**
 
 - Two paying industrial clients in Europe (battery sizing, storage investment and dispatch analysis). The first converted into a performance-based dispatch pilot.
-- A day-ahead forecasting and dispatch loop running at a client site in Europe, with a customer dashboard.
 - One pilot in the US.
 - 1,200+ commits since February 2026.
 - $30,000 in non-dilutive funding; Greentown Labs climatetech accelerator; Duke Melissa & Doug Entrepreneurs program.

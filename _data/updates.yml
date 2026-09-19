@@ -37,7 +37,3 @@
 - date: 2026-08-15
   project: grid-intelligence
   text: Began modelling revenue stacking, so one battery can earn from several value streams instead of one.
-
-- date: 2026-09-01
-  project: grid-intelligence
-  text: Day-ahead forecasting and dispatch loop now running at a client site in Europe, with a second-generation forecasting model and a customer dashboard.
