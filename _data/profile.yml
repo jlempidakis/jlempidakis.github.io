@@ -1,0 +1,105 @@
+# ─────────────────────────────────────────────────────────────
+#  Everything on the home page comes from this file.
+#  Edit text here on github.com (pencil icon) and commit.
+#  The site rebuilds itself in ~1 minute.
+# ─────────────────────────────────────────────────────────────
+
+name: Ioannis Lempidakis
+short_name: Yiannis
+headline: Environmental engineer building node-level forecasting and dispatch software for battery storage.
+location: Durham, NC · Heraklion, Greece
+photo: /assets/img/headshot.jpg
+
+intro: >-
+  I study Environmental Engineering with a minor in Computer Science at Duke, and I co-founded
+  Grid Intelligence, where we build forecasting and dispatch optimization for battery storage in
+  wholesale and industrial energy markets. Before that I worked on process data, machine learning,
+  and product strategy for manufacturers and agritech companies in Greece and the Netherlands.
+
+contact:
+  email: yiannis.lempidakis@duke.edu
+  linkedin: https://www.linkedin.com/in/ioannis-lempidakis/
+
+# Short highlight numbers shown under the intro
+highlights:
+  - value: "$30K"
+    label: non-dilutive funding raised for Grid Intelligence
+  - value: "2"
+    label: paying industrial clients in Europe
+  - value: "Top 5%"
+    label: BlackRock student portfolio competition
+  - value: "100+"
+    label: students taught as engineering design TA
+
+venture:
+  name: Grid Intelligence
+  role: Co-Founder & CEO
+  dates: 2025 – Present
+  place: Durham, NC
+  summary: >-
+    A congestion-native forecasting and dispatch layer for battery storage. We forecast node-level
+    prices and turn them into dispatch schedules operators can audit, run within power, state-of-charge
+    and degradation limits.
+  points:
+    - title: Commercial traction
+      text: Two paying industrial clients in Europe for battery sizing, storage investment and dispatch analysis. The first engagement converted into a performance-based dispatch pilot.
+    - title: US pilot
+      text: Technical pilot at a solar-plus-storage microgrid in the US Southeast, feeding day-ahead dispatch schedules into the site's energy management system.
+    - title: Funding & recognition
+      text: Raised $30,000 in non-dilutive funding. Selected for the Greentown Labs climatetech accelerator and Duke's Melissa & Doug Entrepreneurs program.
+    - title: Product
+      text: Node-level price forecasting with uncertainty bands, and reliability-constrained dispatch optimization on PJM nodes.
+
+experience:
+  - org: Plastika Kritis
+    role: Independent Process & Data Consultant
+    dates: Summer 2026
+    place: Heraklion, Greece
+    points:
+      - Audited six months of lab data for a 60 m³/h closed-loop wash-water treatment plant and found six classes of data-integrity failure behind phantom regulatory exceedances.
+      - Rebuilt the analytical record as a browser-based compliance console covering 62 samples, 27 parameters and two regulatory frameworks.
+      - Delivered a costed investment and compliance proposal with three-scenario risk analysis, projected to cut water-recycling and chemical treatment costs by about 10%.
+  - org: Hoogendoorn Growth Management
+    role: Business & Product Development Intern
+    dates: Summer 2025
+    place: Rotterdam, Netherlands
+    points:
+      - Built a value-based pricing model for SaaS climate-control software, projecting a 5% revenue uplift.
+      - Supported development of control algorithms automating irrigation, lighting and ventilation in greenhouses.
+      - Ran competitor analysis across Dutch and global smart-agriculture markets for senior leadership, and tracked emerging climate-control technology for the product roadmap.
+      - Managed the relationship with BASF Nunhems' seed-breeding facility to test autonomous growing conditions and assess yield under AI-managed scenarios.
+  - org: Plastika Kritis
+    role: Data Science & Business Analysis Intern
+    dates: Summer 2024
+    place: Heraklion, Greece
+    points:
+      - Developed an ML model that optimizes the production schedule from orders and machine parameters, cutting estimated downtime by 6%.
+      - Built a real-time computer-vision defect detector that reduced waste by about 2% in the pilot, and oversaw its rollout in two factories in China.
+
+education:
+  - school: Duke University
+    degree: BSc Environmental Engineering, minor in Computer Science
+    dates: 2023 – Present
+    place: Durham, NC
+    points:
+      - Chair of the European Business Society, advising European firms on US market entry (go-to-market, competitive, macroeconomic and financial analysis).
+      - Rush Chair of Catalyst Tech Club.
+      - Teaching Assistant for first-year engineering design, mentoring and grading 100+ students in coding, CAD and hardware prototyping.
+      - Built a 20-year retirement portfolio (7.26% expected return, 13.12% risk), ranked top 5% in BlackRock's student asset management competition.
+  - school: Pagkrition High School
+    degree: Greek High School Diploma, 19.9/20
+    dates: 2020 – 2023
+    place: Heraklion, Greece
+    points:
+      - Ranked 1st in graduating class. President of the Student Association.
+
+skills:
+  - group: Languages & data
+    items: [Python, SQL, Java, React, MATLAB]
+  - group: Machine learning
+    items: [TensorFlow, BERT, Computer vision, Forecasting, Optimization]
+  - group: Design
+    items: [AutoCAD, Fusion 360, Hardware prototyping]
+
+languages: English and Greek (fluent), Spanish (conversational)
+interests: Windsurfing, hiking, robotics

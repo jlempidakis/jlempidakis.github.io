@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="wrap project">
+  <a class="back" href="{{ '/#projects' | relative_url }}">← All projects</a>
+  <p class="card-date">{{ page.date | date: "%B %Y" }}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="headline">{{ page.subtitle }}</p>{% endif %}
+  {% if page.tags %}<p class="tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+  {% if page.image %}<img class="project-hero" src="{{ page.image | relative_url }}" alt="{{ page.title }}">{% endif %}
+
+  <div class="prose">{{ content }}</div>
+
+  {% if page.gallery %}
+  <div class="gallery">
+    {% for g in page.gallery %}
+    <a href="{{ g | relative_url }}" data-lightbox><img src="{{ g | relative_url }}" alt="" loading="lazy"></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.links %}
+  <div class="actions">
+    {% for l in page.links %}<a class="btn" href="{{ l.url }}" rel="noopener">{{ l.label }}</a>{% endfor %}
+  </div>
+  {% endif %}
+</article>

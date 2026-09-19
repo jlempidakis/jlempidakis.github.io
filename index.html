@@ -1,0 +1,141 @@
+---
+layout: default
+---
+{% assign p = site.data.profile %}
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">{{ p.location }}</p>
+    <h1>{{ p.name }}</h1>
+    <p class="headline">{{ p.headline }}</p>
+    <p class="intro">{{ p.intro }}</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:{{ p.contact.email }}">Email me</a>
+      <a class="btn" href="{{ p.contact.linkedin }}" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="933" height="1400">
+  </figure>
+</section>
+
+<section class="wrap stats" aria-label="Highlights">
+  {% for h in p.highlights %}
+  <div class="stat">
+    <span class="stat-value">{{ h.value }}</span>
+    <span class="stat-label">{{ h.label }}</span>
+  </div>
+  {% endfor %}
+</section>
+
+<section id="work" class="wrap section">
+  <h2 class="section-title">Venture</h2>
+  <article class="venture">
+    <header class="entry-head">
+      <div>
+        <h3>{{ p.venture.name }}</h3>
+        <p class="role">{{ p.venture.role }}</p>
+      </div>
+      <p class="meta">{{ p.venture.dates }}<br>{{ p.venture.place }}</p>
+    </header>
+    <p class="lede">{{ p.venture.summary }}</p>
+    <div class="venture-grid">
+      {% for pt in p.venture.points %}
+      <div class="venture-cell">
+        <h4>{{ pt.title }}</h4>
+        <p>{{ pt.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+
+  <h2 class="section-title">Experience</h2>
+  {% for job in p.experience %}
+  <article class="entry">
+    <header class="entry-head">
+      <div>
+        <h3>{{ job.org }}</h3>
+        <p class="role">{{ job.role }}</p>
+      </div>
+      <p class="meta">{{ job.dates }}<br>{{ job.place }}</p>
+    </header>
+    <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+  </article>
+  {% endfor %}
+
+  <h2 class="section-title">Education</h2>
+  {% for ed in p.education %}
+  <article class="entry">
+    <header class="entry-head">
+      <div>
+        <h3>{{ ed.school }}</h3>
+        <p class="role">{{ ed.degree }}</p>
+      </div>
+      <p class="meta">{{ ed.dates }}<br>{{ ed.place }}</p>
+    </header>
+    <ul>{% for pt in ed.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+  </article>
+  {% endfor %}
+</section>
+
+<section id="projects" class="wrap section">
+  <h2 class="section-title">Projects</h2>
+  <div class="cards">
+    {% assign projects = site.projects | sort: "order" %}
+    {% for proj in projects %}
+    <a class="card" href="{{ proj.url | relative_url }}">
+      {% if proj.image %}<img class="card-img" src="{{ proj.image | relative_url }}" alt="" loading="lazy">{% endif %}
+      <div class="card-body">
+        <p class="card-date">{{ proj.date | date: "%B %Y" }}</p>
+        <h3>{{ proj.title }}</h3>
+        <p>{{ proj.subtitle }}</p>
+        {% if proj.tags %}<p class="tags">{% for t in proj.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/photos/'" %}
+<section id="photos" class="wrap section">
+  <h2 class="section-title">Photos</h2>
+  {% assign shown = 0 %}
+  <div class="gallery">
+    {% for f in photos %}
+      {% assign ext = f.extname | downcase %}
+      {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" %}
+      {% assign shown = shown | plus: 1 %}
+      <a href="{{ f.path | relative_url }}" data-lightbox>
+        <img src="{{ f.path | relative_url }}" alt="{{ f.basename | replace: '-', ' ' | replace: '_', ' ' }}" loading="lazy">
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% if shown == 0 %}<p class="muted">Photos coming soon.</p>{% endif %}
+</section>
+
+<section class="wrap section two-col">
+  <div>
+    <h2 class="section-title">Skills</h2>
+    {% for s in p.skills %}
+    <div class="skill-group">
+      <h4>{{ s.group }}</h4>
+      <p class="tags">{% for i in s.items %}<span>{{ i }}</span>{% endfor %}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div>
+    <h2 class="section-title">Outside work</h2>
+    <p><strong>Languages.</strong> {{ p.languages }}</p>
+    <p><strong>Interests.</strong> {{ p.interests }}</p>
+  </div>
+</section>
+
+<section id="contact" class="wrap section contact">
+  <h2>Get in touch</h2>
+  <p>The fastest way to reach me is email or LinkedIn.</p>
+  <div class="actions">
+    <a class="btn primary" href="mailto:{{ p.contact.email }}">{{ p.contact.email }}</a>
+    <a class="btn" href="{{ p.contact.linkedin }}" rel="noopener">LinkedIn profile</a>
+  </div>
+</section>

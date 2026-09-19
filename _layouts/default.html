@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.subtitle | default: site.description }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ page.subtitle | default: site.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.image | default: site.data.profile.photo }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314213d'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23f4efe6' text-anchor='middle'>IL</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="{{ '/' | relative_url }}">{{ site.data.profile.name }}</a>
+      <nav>
+        <a href="{{ '/#work' | relative_url }}">Work</a>
+        <a href="{{ '/#projects' | relative_url }}">Projects</a>
+        <a href="{{ '/#photos' | relative_url }}">Photos</a>
+        <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>{{ content }}</main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© {{ site.time | date: "%Y" }} {{ site.data.profile.name }}</span>
+      <span>
+        <a href="mailto:{{ site.data.profile.contact.email }}">Email</a> ·
+        <a href="{{ site.data.profile.contact.linkedin }}" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">×</button>
+    <img alt="">
+  </dialog>
+  <script>
+    (function () {
+      var dlg = document.getElementById('lightbox');
+      if (!dlg || !dlg.showModal) return;
+      var img = dlg.querySelector('img');
+      document.querySelectorAll('[data-lightbox]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          img.src = a.getAttribute('href');
+          img.alt = a.querySelector('img') ? a.querySelector('img').alt : '';
+          dlg.showModal();
+        });
+      });
+      dlg.addEventListener('click', function () { dlg.close(); });
+    })();
+  </script>
+</body>
+</html>

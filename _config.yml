@@ -1,0 +1,20 @@
+title: Ioannis Lempidakis
+description: Environmental Engineering at Duke. Co-founder & CEO of Grid Intelligence. Energy storage, optimization, and data.
+url: https://jlempidakis.github.io
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+
+exclude:
+  - README.md
+  - HOW-TO-UPDATE.md
