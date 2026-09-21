@@ -7,7 +7,9 @@ order: 1
 status: Active
 logo: /assets/img/grid-intelligence-logo.png
 tags: [Energy, Optimization, Startup]
-# image: /assets/projects/grid-intelligence.jpg   # upload a picture and uncomment
+image: /assets/projects/gi-showcase-checks.jpg
+gallery:
+  - /assets/projects/gi-hult-nationals.jpg
 ---
 
 Grid Intelligence is a forecasting and dispatch layer for battery storage in wholesale and industrial
@@ -23,3 +25,5 @@ Founded by two co-founders; I lead the company as CEO.
 - One pilot in the US.
 - 1,200+ commits since February 2026.
 - $30,000 in non-dilutive funding; Greentown Labs climatetech accelerator; Duke Melissa & Doug Entrepreneurs program.
+- Best in Showcase and the Climate & Sustainability Prize at the 2026 Duke Startup Showcase, $8,000 in combined awards.
+- Selected for the 2026 US Hult Prize Nationals, representing Duke University.

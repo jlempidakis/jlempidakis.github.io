@@ -4,7 +4,7 @@ subtitle: Rebuilding six months of lab data for an industrial treatment plant
 date: 2026-07-01
 status: Completed
 period: Summer 2026
-order: 2
+order: 4
 tags: [Water, Data integrity, Web app]
 ---
 

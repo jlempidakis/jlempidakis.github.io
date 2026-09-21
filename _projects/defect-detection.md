@@ -4,7 +4,7 @@ subtitle: Computer vision on a plastics production line
 date: 2024-08-01
 status: Completed
 period: Summer 2024
-order: 3
+order: 5
 tags: [Computer vision, Manufacturing]
 ---
 

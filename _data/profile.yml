@@ -26,8 +26,8 @@ highlights:
     label: non-dilutive funding raised for Grid Intelligence
   - value: "2"
     label: paying industrial clients in Europe
-  - value: "Top 5%"
-    label: BlackRock student portfolio competition
+  - value: "2nd"
+    label: nationally in the DOE Solar District Cup
   - value: "100+"
     label: students taught as engineering design TA
 
@@ -94,6 +94,18 @@ education:
       - Ranked 1st in graduating class. President of the Student Association.
 
 recognition:
+  - title: Duke Startup Showcase
+    detail: Best in Showcase and Climate & Sustainability Prize, $8,000, for Grid Intelligence
+    kind: Venture
+  - title: Hult Prize Nationals 2026
+    detail: Grid Intelligence selected to represent Duke University
+    kind: Venture
+  - title: Solar District Cup
+    detail: 2nd place nationally with Duke Solar Solutions, US Department of Energy
+    kind: Competition
+  - title: Energy Terminal
+    detail: Winning case-competition team and top Deep Decarb presentation
+    kind: Competition
   - title: Greentown Labs
     detail: Selected for the climatetech accelerator with Grid Intelligence
     kind: Venture

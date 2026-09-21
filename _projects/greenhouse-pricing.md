@@ -4,7 +4,7 @@ subtitle: Value-based pricing model at Hoogendoorn
 date: 2025-07-01
 status: Completed
 period: Summer 2025
-order: 5
+order: 7
 tags: [Pricing, Strategy, Agritech]
 ---
 

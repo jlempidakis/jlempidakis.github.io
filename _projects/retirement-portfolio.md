@@ -4,7 +4,7 @@ subtitle: BlackRock student asset management competition, top 5%
 date: 2024-03-01
 status: Completed
 period: Duke University
-order: 6
+order: 8
 tags: [Finance, Portfolio theory]
 ---
 

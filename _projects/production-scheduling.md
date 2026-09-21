@@ -4,7 +4,7 @@ subtitle: ML scheduling from orders and machine parameters
 date: 2024-07-01
 status: Completed
 period: Summer 2024
-order: 4
+order: 6
 tags: [Machine learning, Operations]
 ---
 
