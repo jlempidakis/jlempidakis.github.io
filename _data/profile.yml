@@ -11,7 +11,7 @@ location: Durham, NC · Heraklion, Greece
 photo: /assets/img/headshot.jpg
 
 intro: >-
-  I study Environmental Engineering with a minor in Computer Science at Duke, and I co-founded
+  I study Environmental Engineering at Duke, with minors in Energy Engineering and Computer Science, and I co-founded
   Grid Intelligence, where we build forecasting and dispatch optimization for battery storage in
   wholesale and industrial energy markets. Before that I worked on process data, machine learning,
   and product strategy for manufacturers and agritech companies in Greece and the Netherlands.
@@ -78,7 +78,7 @@ experience:
 
 education:
   - school: Duke University
-    degree: BSc Environmental Engineering, minor in Computer Science
+    degree: BSc Environmental Engineering, minor in Energy Engineering, minor in Computer Science
     dates: 2023 – Present
     place: Durham, NC
     points:
